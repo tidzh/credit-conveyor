@@ -3,10 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "nodemon node ./bin/www"
+    "start": "nodemon node app.js"
   },
   "dependencies": {
-    "debug": "~2.6.9",
     "express": "~4.16.1"
   },
   "devDependencies": {
