@@ -3,12 +3,14 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "nodemon node app.js"
+    "start": "nodemon -r dotenv/config app.js"
   },
   "dependencies": {
-    "express": "~4.16.1"
+    "express": "~4.16.1",
+    "pg": "^8.7.3"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "dotenv": "^16.0.1"
   }
 }
