@@ -6,11 +6,14 @@
     "start": "nodemon -r dotenv/config app.js"
   },
   "dependencies": {
+    "app-root-path": "^3.1.0",
     "express": "~4.16.1",
-    "pg": "^8.7.3"
+    "morgan": "^1.10.0",
+    "pg": "^8.7.3",
+    "winston": "^3.8.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15",
-    "dotenv": "^16.0.1"
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.15"
   }
 }
