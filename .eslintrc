@@ -1,0 +1,113 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "env": {
+    "node": true
+  },
+  "extends": ["prettier", "plugin:@typescript-eslint/recommended"],
+  "plugins": ["import", "@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "prefer-promise-reject-errors": "off",
+
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["warn", { "functions": false }],
+    "consistent-return": "off",
+    "semi": "error",
+    "max-params": ["warn", 4],
+
+    "global-require": "warn",
+    "@typescript-eslint/no-var-requires": "warn",
+    "@typescript-eslint/prefer-interface": "off",
+    "camelcase": "off",
+
+    "no-useless-constructor": "off",
+    "@typescript-eslint/no-useless-constructor": ["error"],
+
+    "import/no-cycle": "error",
+    "import/no-duplicates": "off",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/named": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "unknown", "internal", ["parent", "sibling", "index"]],
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ],
+    "import/extensions": ["error", { "ts": "never", "tsx": "never", "json": "always" }],
+    "import/no-unresolved": [2, { "commonjs": true, "amd": true }],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "ignoreRestSiblings": true,
+        "varsIgnorePattern": "^React$",
+        "args": "after-used",
+        "argsIgnorePattern": "^_$"
+      }
+    ],
+    "curly": "error",
+    "no-shadow": "off",
+    "no-underscore-dangle": "warn",
+    "no-plusplus": "warn",
+    "no-bitwise": "warn",
+    "operator-assignment": "warn",
+    "no-multiple-empty-lines": [
+      "warn",
+      {
+        "max": 1
+      }
+    ],
+    "padding-line-between-statements": [
+      "warn",
+      { "blankLine": "always", "prev": ["const", "let", "if", "for", "try"], "next": "return" }
+    ],
+    "import/no-useless-path-segments": "warn",
+    "array-callback-return": "warn",
+    "no-param-reassign": "warn",
+    "no-restricted-syntax": "warn",
+    "no-prototype-builtins": "warn",
+    "no-case-declarations": "warn",
+    "import/newline-after-import": "warn",
+    "prefer-destructuring": "warn",
+    "no-return-assign": "warn",
+    "max-classes-per-file": "warn",
+    "class-methods-use-this": "warn",
+    "no-dupe-class-members": "warn",
+    "no-useless-return": "warn",
+    "no-extra-boolean-cast": "warn",
+    "no-restricted-globals": "warn",
+    "no-unused-expressions": "warn",
+    "no-continue": "warn",
+    "import/no-named-as-default": "warn",
+    "no-useless-escape": "warn",
+    "no-template-curly-in-string": "warn",
+
+    "@typescript-eslint/ban-ts-comment": "warn",
+    "@typescript-eslint/ban-types": "warn"
+  },
+  "parser": "@typescript-eslint/parser",
+  "settings": {
+    "import/extensions": [".js", ".ts"],
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts"]
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".ts"]
+      },
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  }
+}
